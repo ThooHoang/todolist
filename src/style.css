@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightsalmon;
+    font-family:  "Roboto", sans-serif;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todolist-container {
+    background-color: wheat;
+    padding: 3rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: lightpink;
+    padding: 8px;
+    margin-inline: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input {
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+}
+
+li {
+    list-style-type: none;
+    margin-block: 8px;
+}

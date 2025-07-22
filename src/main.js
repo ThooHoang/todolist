@@ -16,6 +16,20 @@ function saveInput() {
   li.innerHTML = inputValue;
   list.appendChild(li);
 
+  // Create CheckBox
+  let checkBox = document.createElement('input');
+  checkBox.type = 'checkbox';
+  li.appendChild(checkBox)
+
+  checkBox.addEventListener('click', function cross() {
+    if (checkBox.checked) {
+      li.style.textDecoration = "line-through"
+    } else {
+      li.style.textDecoration = "none"
+
+    }
+  })
+
   // Remove Task Button
   const removeButton = document.createElement('button');
   removeButton.textContent = "Delete";
@@ -26,9 +40,23 @@ function saveInput() {
   })
 
   saveTasks();
-
-
+  
+  
 }
+
+
+// Remove All Button
+const removeAllButton = document.createElement('button');
+removeAllButton.textContent = "Delete All";
+document.querySelector('.todolist-container').appendChild(removeAllButton);
+removeAllButton.addEventListener('click', () => {
+  list.querySelectorAll('li').forEach(li => {
+    li.remove();
+    saveTasks()
+  });
+})
+
+
 
 
 // Save to local storage
